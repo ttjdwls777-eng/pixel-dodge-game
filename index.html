@@ -25,7 +25,15 @@
     html,body{ height:100%; }
     body{
       margin:0;
-      background: radial-gradient(1200px 600px at 50% 0%, #12234a 0%, var(--bg) 55%);
+      background:
+      linear-gradient(
+        135deg,
+        #ffcf6e 0%,
+        #ff9a3c 30%,
+        #ff5e3a 60%,
+        #b31217 100%
+        ),
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 40%);
       color:var(--txt);
       font-family:"Press Start 2P", system-ui, sans-serif;
       display:flex;
@@ -114,13 +122,15 @@
     /* 플레이어(피하는 캐릭터) */
     .player{
       position:absolute;
-      width:24px; height:24px;
-      left:50%; top:70%;
-      transform: translate(-50%, -50%);
-      background: var(--accent);
-      border:2px solid #0a5a47;
-      box-shadow: 0 0 0 2px rgba(0,0,0,.25) inset;
-      border-radius:6px;
+      width:30px;
+      height:30px;
+
+      background-image:url("https://cdn-icons-png.flaticon.com/512/4712/4712027.png");
+      background-size:contain;
+      background-repeat:no-repeat;
+      background-position:center;
+      
+      animation: float 1.2s ease-in-out infinite;
     }
     .player::after{
       content:"";
